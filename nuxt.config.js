@@ -2,6 +2,8 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
+  // ソース を appに移動した
+  srcDir: 'app',
 
   /*
   ** Headers of the page
@@ -24,8 +26,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['element-ui/lib/theme-chalk/index.css'],
-
+  css: ['element-ui/lib/theme-chalk/index.css', '~/assets/common.css'],
   /*
   ** Plugins to load before mounting the App
   */
@@ -44,6 +45,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: 'https://nuxt-blog-service-31a1c.firebaseio.com/'
   },
 
   /*
